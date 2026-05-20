@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2026 香港快閃二日遊</title>
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <link class="js-favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#0284c7">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -21,9 +21,9 @@
         
         /* App Navigation Styles */
         .nav-item { transition: all 0.3s ease; }
-        .nav-item.active { color: #2563eb; transform: translateY(-2px); }
+        .nav-item.active { color: #0284c7; transform: translateY(-2px); }
         .nav-item.active i { transform: scale(1.1); }
-        .nav-indicator { position: absolute; top: 0; left: 0; width: 25%; height: 3px; background: #2563eb; transition: all 0.3s ease; }
+        .nav-indicator { position: absolute; top: 0; left: 0; width: 25%; height: 3px; background: #0284c7; transition: all 0.3s ease; }
 
         /* Content Transition */
         .tab-content { display: none; animation: fadeIn 0.3s ease-in-out; }
@@ -145,14 +145,14 @@
             /* 解決跨頁空白 */
             body.print-book .bg-white.rounded-xl,
             body.print-book .flight-row,
-            body.print-book .bg-emerald-50\/50, body.print-book li {
+            body.print-book .bg-sky-50\/50, body.print-book li {
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
             }
 
             /* 行程表排版 */
             body.print-book #tab-itinerary::before {
-                content: "📋 詳細行程表";
+                content: "📋 彈性景點與活動清單";
                 display: block;
                 font-size: 1.5rem;
                 font-weight: bold;
@@ -199,7 +199,7 @@
             body.print-book .flight-board { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; background-color: transparent !important; color: #334155 !important; }
             body.print-book .flight-row { padding: 12px !important; border: 2px solid #e2e8f0 !important; border-radius: 8px !important; background-color: white !important; margin: 0 !important; color: #334155 !important; }
             body.print-book .flight-row .text-slate-400 { color: #64748b !important; }
-            body.print-book .flight-row .text-yellow-400 { color: #059669 !important; } /* 國泰綠 */
+            body.print-book .flight-row .text-yellow-400 { color: #0284c7 !important; } 
             body.print-book .flight-row .text-slate-300 { color: #94a3b8 !important; }
 
             body.print-book #tab-hotels .space-y-4 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
@@ -230,13 +230,13 @@
 </head>
 <body class="text-slate-700 bg-slate-100 h-screen flex flex-col overflow-hidden">
 
-    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 shadow-lg shrink-0 z-50 pt-safe-top">
+    <header class="bg-gradient-to-r from-sky-600 to-indigo-700 text-white p-4 shadow-lg shrink-0 z-50 pt-safe-top">
         <div class="max-w-3xl mx-auto flex justify-between items-center">
             <div>
                 <h1 class="text-lg font-bold flex items-center">
                    <span class="mr-2 text-xl">✈️</span> 2026 香港快閃二日遊
                 </h1>
-                <p id="header-date" class="text-emerald-100 text-xs mt-0.5 ml-8">5/24 (日) ~ 5/25 (一)｜共 2 天</p>
+                <p id="header-date" class="text-sky-100 text-xs mt-0.5 ml-8">5/24 (日) ~ 5/25 (一)｜共 2 天｜4 人口袋景點特輯</p>
             </div>
             <div class="text-right flex items-center gap-1.5 print-actions">
                 <div class="flex bg-white/20 rounded overflow-hidden shadow-sm">
@@ -260,67 +260,262 @@
             <!-- 第一章：行程表 -->
             <div id="tab-itinerary" class="tab-content active space-y-6 mt-2">
                 
+                <!-- Day 1 -->
                 <div class="relative pl-8">
                     <div class="timeline-line"></div>
-                    <div class="timeline-dot absolute left-0 top-1 w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold shadow-md z-10">D1</div>
-                    <div class="bg-white rounded-xl p-4 shadow-sm ml-4 border-l-4 border-emerald-400">
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-bold text-lg">5/24 (日)</h3>
-                            <span class="text-[10px] font-bold text-emerald-500 bg-emerald-50 px-2 py-1 rounded">啟程出發 & 維港夜景</span>
+                    <div class="timeline-dot absolute left-0 top-1 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shadow-md z-10">D1</div>
+                    <div class="bg-white rounded-xl p-4 shadow-sm ml-4 border-l-4 border-sky-400">
+                        <div class="flex justify-between items-baseline mb-2 border-b pb-2">
+                            <h3 class="font-bold text-lg text-slate-800">5/24 (日)</h3>
+                            <span class="text-[10px] font-bold text-sky-600 bg-sky-50 px-2 py-1 rounded">第一天預計前往景點與美食</span>
                         </div>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <div class="bg-emerald-50/50 border border-emerald-100 rounded-lg p-2.5 my-2 shadow-sm">
+                        <ul class="space-y-4 text-sm text-slate-600 mt-3">
+                            
+                            <!-- 班機去程卡片 (固定航班資訊保留) -->
+                            <div class="bg-sky-50/50 border border-sky-100 rounded-lg p-2.5 my-2 shadow-sm">
                                 <div class="flex justify-between items-center mb-1.5">
-                                    <span class="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded tracking-wide">國泰 CX407</span>
+                                    <span class="text-[10px] font-bold bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded tracking-wide">國泰航空 CX407 (預定航班)</span>
                                     <span class="text-[10px] text-slate-400">2h 05m</span>
                                 </div>
                                 <div class="flex justify-between items-center text-slate-700">
-                                    <div class="text-center"><div class="text-lg font-mono-display font-bold leading-none">08:00</div><div class="text-[10px] text-slate-500 mt-0.5">TPE 桃園</div></div>
-                                    <div class="flex-1 px-4 flex flex-col items-center justify-center relative">
-                                        <div class="w-full border-t border-dashed border-emerald-300"></div>
-                                        <i class="fa-solid fa-plane absolute text-emerald-400 text-xs"></i>
+                                    <div class="text-center">
+                                        <div class="text-xs font-bold text-slate-400">桃園 TPE</div>
+                                        <div class="text-lg font-mono-display font-bold leading-none mt-1">08:00</div>
                                     </div>
-                                    <div class="text-center"><div class="text-lg font-mono-display font-bold leading-none">10:05</div><div class="text-[10px] text-slate-500 mt-0.5">HKG 香港</div></div>
+                                    <div class="flex-1 px-4 flex flex-col items-center justify-center relative">
+                                        <div class="w-full border-t border-dashed border-sky-300"></div>
+                                        <i class="fa-solid fa-plane absolute text-sky-400 text-xs"></i>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-xs font-bold text-slate-400">香港 HKG</div>
+                                        <div class="text-lg font-mono-display font-bold leading-none mt-1">10:05</div>
+                                    </div>
                                 </div>
                             </div>
-                            <li class="flex items-start"><i class="fa-solid fa-hotel mt-1 mr-2 text-slate-400"></i> 前往尖沙咀 入住 基督教青年會 (港青)</li>
-                            <li class="flex items-start"><i class="fa-solid fa-utensils mt-1 mr-2 text-slate-400 w-4 text-center"></i> <div><b>品嚐道地港式飲茶</b><br><span class="text-xs text-slate-400">建議：一點心、添好運或附近茶樓</span></div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-ferry mt-1 mr-2 text-slate-400 w-4 text-center"></i> <div><b>天星小輪</b><br><span class="text-xs text-slate-400">傍晚搭乘百年經典渡輪橫渡維多利亞港</span></div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-train-tram mt-1 mr-2 text-slate-400 w-4 text-center"></i> 搭乘第六代山頂纜車前往太平山頂</li>
-                            <li class="flex items-start"><i class="fa-solid fa-city mt-1 mr-2 text-slate-400 w-4 text-center"></i> 凌霄閣摩天台 428 欣賞維港絕美夜景</li>
+
+                            <!-- 抵港與市區交通 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-sky-700 bg-sky-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-bus mr-1"></i>交通</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        入境香港 ＆ 快捷前往市區
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">辦理入境與提領行李後，推薦搭乘機場快線至九龍站，再轉乘的士（計程車）直達尖沙咀 YMCA，節省快閃交通時間。</p>
+                                </div>
+                            </li>
+
+                            <!-- 飯店寄存 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-indigo-700 bg-indigo-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-hotel mr-1"></i>服務</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        香港 YMCA 港青酒店寄存行李
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">抵達下榻酒店寄放行李與戰利品。解放雙手、輕裝出發！</p>
+                                </div>
+                            </li>
+
+                            <!-- 道地飲茶午餐 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-emerald-700 bg-emerald-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-utensils mr-1"></i>美食</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        港式點心飲茶（午餐推薦）
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">推薦在尖沙咀附近品嚐高人氣港點（如：<b>名點屋</b>、或搭地鐵一站至佐敦吃<b>點點心</b>），爽吃酥皮叉燒包、燒賣及鮮蝦腸粉。</p>
+                                </div>
+                            </li>
+
+                            <!-- 中上環散策 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-orange-700 bg-orange-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-map-location-dot mr-1"></i>景點</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        港島復古與文創深度遊（中環～上環）
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">
+                                        搭地鐵跨海至港島。漫步活化古蹟<b>中環街市</b>，搭乘世界最長<b>半山自動扶手電梯</b>，並在充滿文青風的<b>大館 (Tai Kwun)</b> 前拍照打卡。<br>
+                                        <span class="text-[11px] text-sky-600 font-medium"><i class="fa-solid fa-heart mr-1"></i>驚喜散步：</span>沿著荷李活道步行至上環，尋訪繽紛的街頭壁畫、古物小店與特色手沖咖啡廳。
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- 叮叮車體驗 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-teal-700 bg-teal-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-train-tram mr-1"></i>體驗</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        極致情懷：經典雙層叮叮車體驗
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">在上環或中環站隨意登上百年雙層「叮叮車」。坐在二樓最前排或靠窗席位，隨晚風吹拂，用極具情懷的慢速度欣賞香港大樓林立的市景。</p>
+                                </div>
+                            </li>
+
+                            <!-- 天星小輪與燈光秀 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-orange-700 bg-orange-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-camera mr-1"></i>景點</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        天星小輪 ＆ 20:00 幻彩詠香江
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">
+                                        搭叮叮車回中環碼頭，乘坐百年歷史的<b>天星小輪</b>橫渡維港回九龍。
+                                        漫步至<b>星光大道</b>與<b>海濱長廊</b>。於 20:00 準時觀賞維港音樂光影秀，收錄世界頂級的經典百萬霓虹夜景！
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- 廟街夜市宵夜 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-emerald-700 bg-emerald-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-bowl-food mr-1"></i>美食</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        廟街夜市大牌檔 ＆ 米其林中式甜品
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">
+                                        搭地鐵或漫步至佐敦/油麻地。走進熱鬧的<b>廟街夜市</b>，吃熱騰騰的<b>興記煲仔飯</b>或<b>四季煲仔飯</b>、避風塘炒蟹、炸蠔餅。<br>
+                                        <span class="text-[11px] text-sky-600 font-medium"><i class="fa-solid fa-ice-cream mr-1"></i>飯後點心：</span>推薦至米其林推薦的<b>佳佳甜品</b>吃一碗濃郁的黑芝麻糊、杏仁露、或薑汁湯圓。
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- 返回飯店 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-indigo-700 bg-indigo-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-moon mr-1"></i>放鬆</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        返回港青 YMCA 辦理入住與休息
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">返抵飯店正式辦理 Check-in 入住，在溫馨舒適的房間中梳洗休息，儲備好明天的體力。</p>
+                                </div>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
 
+                <!-- Day 2 -->
                 <div class="relative pl-8">
                     <div class="timeline-line bg-transparent"></div>
                     <div class="timeline-dot absolute left-0 top-1 w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold shadow-md z-10">D2</div>
                     <div class="bg-white rounded-xl p-4 shadow-sm ml-4 border-l-4 border-slate-400">
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-bold text-lg">5/25 (一)</h3>
-                            <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded">市區巡禮 & 賦歸</span>
+                        <div class="flex justify-between items-baseline mb-2 border-b pb-2">
+                            <h3 class="font-bold text-lg text-slate-800">5/25 (一)</h3>
+                            <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded">第二天預計前往景點與伴手禮採買</span>
                         </div>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li class="flex items-start"><i class="fa-solid fa-mug-hot mt-1 mr-2 text-amber-500 w-4 text-center"></i> <div><b>澳洲牛奶公司 / 華星冰室</b><br><span class="text-xs text-slate-400">必吃經典港式早餐：炒蛋多士與奶茶</span></div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-door-open mt-1 mr-2 text-slate-400"></i> 11:00 飯店辦理退房、寄放行李</li>
-                            <li class="flex items-start"><i class="fa-solid fa-bag-shopping mt-1 mr-2 text-slate-400 w-4 text-center"></i> <div><b>市區伴手禮採買</b><br><span class="text-xs text-slate-400">Bakehouse 蛋塔、珍妮曲奇小熊餅乾</span></div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-train mt-1 mr-2 text-slate-400 w-4 text-center"></i> 搭乘機場快線前往香港國際機場</li>
+                        <ul class="space-y-4 text-sm text-slate-600 mt-3">
                             
+                            <!-- 經典冰室早餐 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-emerald-700 bg-emerald-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-egg mr-1"></i>美食</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        經典港式冰室早餐：炒蛋多士與熱奶茶
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">步行至佐敦，體驗香港「神速且朝氣」的冰室文化！必吃<b>澳洲牛奶公司</b>極度滑嫩的炒蛋厚多士、蛋白燉鮮奶，或<b>華星冰室</b>的牛肉多士。</p>
+                                </div>
+                            </li>
+
+                            <!-- 尖沙咀海濱散步 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-orange-700 bg-orange-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-tree mr-1"></i>景點</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        尖沙咀鐘樓 ＆ 九龍公園漫步
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">散步回飯店途中，可順道逛逛九龍公園的大片綠意，或在白天的尖沙咀鐘樓前拍張清晨微光中的大合照，享受慵懶的一日開始。</p>
+                                </div>
+                            </li>
+
+                            <!-- 飯店退房 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-indigo-700 bg-indigo-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-hotel mr-1"></i>服務</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        飯店辦理退房與行李寄存
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">在房內整理戰利品並辦理退房辦理（11:00 前）。行李箱繼續寄存在飯店櫃檯，空出兩手開始瘋狂伴手禮採購！</p>
+                                </div>
+                            </li>
+
+                            <!-- 伴手禮大採購 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-rose-700 bg-rose-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-basket-shopping mr-1"></i>購物</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        伴手禮瘋狂採買大作戰
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">
+                                        <span class="font-bold text-rose-600">🛍️ 尖沙咀雙巨頭：</span><br>
+                                        1. 搶購紅遍全網的 <b>Bakehouse</b> 現烤酸種蛋塔（今天現買，帶回台灣烤箱回溫依然外酥內嫩！）。<br>
+                                        2. 步行至鄰近的美麗都大廈，購買入口即化、最經典的 <b>珍妮曲奇小熊餅乾</b> (Jenny Bakery)。
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- 頂級燒臘午餐 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-emerald-700 bg-emerald-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-utensils mr-1"></i>美食</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        頂級脆皮燒臘饗宴（午餐推薦）
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">在尖沙咀享用高水準的港式燒臘飯（如甘牌燒鵝分店或道地街頭老字號），多汁酥脆的燒味保證齒頰留香！</p>
+                                </div>
+                            </li>
+
+                            <!-- 領行李與機場交通 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-sky-700 bg-sky-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-bus mr-1"></i>交通</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        提領行李 ＆ 機場快線直達機場
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">返回 YMCA YMCA 飯店提領寄放的大行李。在飯店大廳將曲奇餅乾包裝裝箱（蛋塔強烈建議手提攜帶才不會撞碎）。隨後前往九龍站搭乘機場快線前往機場。</p>
+                                </div>
+                            </li>
+
+                            <!-- 機場回程卡片 (固定航班資訊保留) -->
                             <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 my-3 shadow-sm">
                                 <div class="flex justify-between items-center mb-1.5">
-                                    <span class="text-[10px] font-bold bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded tracking-wide">國泰 CX402</span>
+                                    <span class="text-[10px] font-bold bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded tracking-wide">國泰航空 CX402 (預定航班)</span>
                                     <span class="text-[10px] text-slate-400">1h 50m</span>
                                 </div>
                                 <div class="flex justify-between items-center text-slate-700">
-                                    <div class="text-center"><div class="text-lg font-mono-display font-bold leading-none">18:15</div><div class="text-[10px] text-slate-500 mt-0.5">HKG 香港</div></div>
+                                    <div class="text-center">
+                                        <div class="text-xs font-bold text-slate-400">香港 HKG</div>
+                                        <div class="text-lg font-mono-display font-bold leading-none mt-1">18:15</div>
+                                    </div>
                                     <div class="flex-1 px-4 flex flex-col items-center justify-center relative">
                                         <div class="w-full border-t border-dashed border-slate-300"></div>
                                         <i class="fa-solid fa-plane absolute text-slate-400 text-xs"></i>
                                     </div>
-                                    <div class="text-center"><div class="text-lg font-mono-display font-bold leading-none">20:05</div><div class="text-[10px] text-slate-500 mt-0.5">TPE 桃園</div></div>
+                                    <div class="text-center">
+                                        <div class="text-xs font-bold text-slate-400">桃園 TPE</div>
+                                        <div class="text-lg font-mono-display font-bold leading-none mt-1">20:05</div>
+                                    </div>
                                 </div>
                             </div>
-                            <li class="flex items-start text-xs text-emerald-600 font-bold"><i class="fa-solid fa-house mt-1 mr-2"></i> 2天快閃行程圓滿結束</li>
+
+                            <!-- 機場巡禮 -->
+                            <li class="flex items-start">
+                                <span class="font-bold text-[10px] text-teal-700 bg-teal-100/80 px-2 py-1 rounded shrink-0 mr-3 mt-0.5 w-16 text-center"><i class="fa-solid fa-passport mr-1"></i>體驗</span>
+                                <div>
+                                    <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                                        香港國際機場：辦理託運與免稅最後巡禮
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">
+                                        抵達機場後辦理行李託運（注意伴手禮液體跟刀具規定）。入關後，可於機場免稅店做最後的藥妝、名產採購，或者去美食廣場補吃漏網的著名點心。
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start text-xs text-emerald-600 font-bold">
+                                <i class="fa-solid fa-house mt-1 mr-2 text-emerald-500"></i>
+                                <div>
+                                    <span>搭乘國泰航空回到台灣，溫暖降落桃園機場，充滿驚喜的 2天1夜香港快閃圓滿落幕！</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -340,7 +535,7 @@
                 <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg border border-slate-700">
                     <div class="bg-slate-900 p-4 flex justify-between items-center text-white border-b border-slate-700">
                         <h2 class="font-bold flex items-center">
-                            <i class="fa-solid fa-plane-departure mr-2 text-emerald-400"></i> 航班資訊
+                            <i class="fa-solid fa-plane-departure mr-2 text-sky-400"></i> 航班資訊
                         </h2>
                         <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded"><i class="fa-solid fa-shield-halved mr-1"></i>訂位代號已隱藏</span>
                     </div>
@@ -349,8 +544,8 @@
                         <div class="flight-row p-4 relative">
                             <div class="flex justify-between items-start mb-3">
                                 <div class="flex items-center flex-wrap gap-1">
-                                    <span class="text-[10px] font-bold bg-emerald-600 text-white px-2 py-0.5 rounded">去程航班</span>
-                                    <span class="font-mono-display text-xl text-emerald-400 tracking-wider ml-1">CX407</span>
+                                    <span class="text-[10px] font-bold bg-sky-600 text-white px-2 py-0.5 rounded">去程航班</span>
+                                    <span class="font-mono-display text-xl text-sky-400 tracking-wider ml-1">CX407</span>
                                 </div>
                                 <div class="text-[10px] text-slate-500 font-mono-display">5/24 (SUN)</div>
                             </div>
@@ -360,7 +555,7 @@
                                 <div class="text-center"><div class="text-2xl font-mono-display font-bold">10:05</div><div class="text-[10px] text-slate-400">HKG</div></div>
                             </div>
                             <div class="text-right mt-3">
-                                <a href="https://tw.trip.com/actualtime/detail.html?flightNo=CX407&departCity=TPE&arriveCity=HKG&date=2026-05-24&locale=zh-TW" target="_blank" class="text-[10px] text-emerald-300 hover:text-white transition border border-emerald-500/50 hover:bg-emerald-600/50 px-2 py-1 rounded inline-flex items-center">
+                                <a href="https://tw.trip.com/actualtime/detail.html?flightNo=CX407&departCity=TPE&arriveCity=HKG&date=2026-05-24&locale=zh-TW" target="_blank" class="text-[10px] text-sky-300 hover:text-white transition border border-sky-500/50 hover:bg-sky-600/50 px-2 py-1 rounded inline-flex items-center">
                                     Trip.com 航班動態 <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                                 </a>
                             </div>
@@ -370,7 +565,7 @@
                             <div class="flex justify-between items-start mb-3">
                                 <div class="flex items-center flex-wrap gap-1">
                                     <span class="text-[10px] font-bold bg-slate-600 text-white px-2 py-0.5 rounded">回程航班</span>
-                                    <span class="font-mono-display text-xl text-emerald-400 tracking-wider ml-1">CX402</span>
+                                    <span class="font-mono-display text-xl text-sky-400 tracking-wider ml-1">CX402</span>
                                 </div>
                                 <div class="text-[10px] text-slate-500 font-mono-display">5/25 (MON)</div>
                             </div>
@@ -471,7 +666,7 @@
                     </div>
                 </div>
                 
-                <!-- 行李與託運規定 -->
+                <!-- 行計與託運規定 -->
                 <div class="bg-slate-800 text-white rounded-2xl p-5 shadow-lg">
                     <h2 class="text-lg font-bold mb-4 flex items-center">
                         <i class="fa-solid fa-suitcase-rolling mr-2 text-yellow-400"></i> 行李額度 & 託運規定
@@ -480,7 +675,7 @@
                     <div class="space-y-4 text-sm">
                         <!-- 額度區塊 -->
                         <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                            <div class="font-bold text-emerald-400 mb-2 border-b border-slate-600 pb-1"><i class="fa-solid fa-scale-unbalanced mr-1"></i> 國泰航空額度 (每人)</div>
+                            <div class="font-bold text-sky-400 mb-2 border-b border-slate-600 pb-1"><i class="fa-solid fa-scale-unbalanced mr-1"></i> 國泰航空額度 (每人)</div>
                             <ul class="space-y-2 text-slate-200">
                                 <li class="flex items-start">
                                     <i class="fa-solid fa-bag-shopping mt-1 mr-2 w-4 text-center text-slate-400"></i>
